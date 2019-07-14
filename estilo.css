@@ -1,0 +1,197 @@
+body {
+  overflow: hidden; 
+}
+ 
+/* ini: Preloader */
+ 
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#ee6e73; /* cor do background que vai ocupar o body */
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+.bolas > div {
+  display: inline-block;
+  background-color: #000;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: 3px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: animarBola;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+   
+}
+.bolas > div:nth-child(1) {
+    animation-duration:0.75s ;
+    animation-delay: 0;
+}
+.bolas > div:nth-child(2) {
+    animation-duration: 0.75s ;
+    animation-delay: 0.12s;
+}
+.bolas > div:nth-child(3) {
+    animation-duration: 0.75s  ;
+    animation-delay: 0.24s;
+}
+ 
+@keyframes animarBola {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  16% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0.7;
+  }
+  33% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; 
+  } 
+}
+/* end: Preloader */
+
+/* HEIGHT 100% */
+html, body {height: 100%;}
+.bloco {min-height: 100%; padding-top: 90px;}
+
+/* CORES */
+.green_logo {background-color: #eec4e2;}
+
+
+/* logo */
+.logotipo_text {font-size: 0; margin: 0;}
+.logo_img {width: 80px; margin-top: 15px;}
+
+/* MENU */
+.navbar {background-color: transparent; transition: background 0.5 s linear;}
+.navbar ul a:hover {background-color: transparent; color: #eec4e2;}
+.nav-color {background-color: rgba(0,0,0,0.7); transition: background 0.5 s linear;}
+/* HOME */
+.home {background-image: url('../img/online.jpg'); background-repeat: no-repeat;
+background-size: cover;}
+.banner h2 {font-size: 2.5rem; font-weight: 900; text-transform: uppercase;}
+.banner p {font-size: 1.2rem; line-height: 1.8rem;}
+
+/* TITULO E PARAGRAFO */
+.titulo {font-size: 2rem; text-transform: uppercase;}
+.titulo::after {content: ''; display: block; width: 100px; border-top: 1px solid #eec4e2;
+margin:15px auto;}
+.paragrafo {line-height: 1.8rem; }
+
+/* Sobre */
+.sobre {background-image: url(../img/interlaced.png);}
+.sobre h2 {font-size: 2rem; color: #212121; text-transform: uppercase;}
+.sobre h2::after {content: ''; display: block; width: 100px; border-top: 2px solid #1dabb3;
+margin: 20px auto;}
+.sobre p {line-height: 1.9rem; text-align: justify;} 
+.sobre .missao-visao-valores {padding: 20px 0; margin-top: 35px;}
+.sobre .missao-visao-valores .icon {color: #fff;}
+.sobre .missao-visao-valores h3 {font-size: 1.5rem; color: #; text-transform: uppercase;}
+.sobre .missao-visao-valores p {color: #000; text-align: center;}
+
+/* cursos */
+.cursos {background-image: url(../img/interlaced.png);}
+.cursos h2 {font-size: 2rem; color: #212121; text-transform: uppercase; text-align: center;}
+.cursos h2::after {content: ''; display: block; width: 100px; border-top: 2px solid #1dabb3;
+margin: 20px auto;}
+.cursos p {line-height: 1.9rem; text-transform: uppercase; text-align: center;} 
+
+/* contato */
+.contato .contato {min-height: 560px; padding: 30px;}
+ h1 {font-size: 2rem; color: #212121; text-transform: uppercase; text-align: center;}
+ .contato {background-image: url(../img/interlaced.png);}
+
+/* Rodapé */
+
+ .rodape {background-image: url('../img/mosaic.png'); background-repeat: no-repeat; background-size: cover;
+padding: 30px 0;}
+
+
+/* Bordas */
+.conteudo {
+	width: 400px;
+	height: 300px;
+	border-top: 4px;
+	border: 2px solid #eec4e2;
+}
+
+
+
+.card {
+	width: px;
+	height: px;
+	border-top: 1px;
+	border: 1px solid #eec4e2;
+}
+
+/* style */
+
+nav {
+  color: #fff;
+  background-color: #ee6e73;
+  width: 100%;
+  height: 94px;
+  line-height: 94px;
+}
+
+nav.nav-extended .nav-wrapper {
+  min-height: 94px;
+  height: auto;
+}
+
+.navbar-fixed {
+  position: absolute;
+  height: 94px;
+  z-index: 997;
+}
+
+nav i,
+nav [class^="mdi-"], nav [class*="mdi-"],
+nav i.material-icons {
+  display: block;
+  font-size: 24px;
+  height: 94px;
+  line-height: 94px;
+}
+
+.side-nav {background: url('../img/mosaic.png')}
+.side-nav li>a {color: #fff; font-weight: 100;}
+
+}
+
+}
+/* MEDIA */
+@media only screen and (max-width: 480px) {
+  
+}
+
+@media only screen and (min-width: 601px) {
+  .banner {padding-top: 4.5rem;}
+  .banner h2 {font-size: 4rem;}
+.container {
+	width: 75%;
+}
+}
+
+@media only screen and (min-width: 993px) {
+	.banner {padding-top: 5rem;}
+ .banner h2 {font-size: 5rem;} 
+.container {
+	width: 95%;
+}
+}

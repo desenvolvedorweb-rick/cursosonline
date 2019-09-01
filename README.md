@@ -1,2 +1,2 @@
 # cursosonline
-Página inicial para plataforma de cursos online
+Página de inicio para plataformas de cursos online.
